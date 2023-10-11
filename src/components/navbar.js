@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
 import menu from '../assets/hamburger.png';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
+  const animateNavbar = {
+    hidden: {
+      opacity: 0,
+      fill: 'rgba(255, 255, 255, 0)'
+    },
+    visible: {
+      opacity: 1,
+      fill: 'rgba(0, 0, 0, 1)',
+      transition: {
+        default: { duration: 2, ease: 'easeInOut' },
+        fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+      }
+    }
+  };
   const [navbar, setNavbar] = useState(false);
   return (
-    <nav className='navbar'>
+    <motion.nav className='navbar'
+    >
       <section className='nav'>
         <div className='icon'>
           <button className='button-icon' onClick={() => {setNavbar(!navbar)}}>
@@ -16,7 +32,11 @@ const Navbar = () => {
                 )}    
           </button>
         </div>
-        <div className={`link ${navbar ? "block" : "hidden"}`}>
+        <motion.div className={`link ${navbar ? "block" : "hidden"}`}
+        variants={animateNavbar}
+    initial="hidden"
+    whileInView="visible"
+        >
                 <ul className="links">
                     <li className='home' onClick={() => {setNavbar(!navbar)}}><a href="#home">home</a></li>
                     <li className='about' onClick={() => {setNavbar(!navbar)}}><a href="#about">about</a></li>
@@ -24,9 +44,9 @@ const Navbar = () => {
                     <li className='project' onClick={() => {setNavbar(!navbar)}}><a href="#project">project</a></li>   
                     <li className='contact' onClick={() => {setNavbar(!navbar)}}><a href="#contact">contact</a></li>
                 </ul>
-        </div>
+        </motion.div>
       </section>
-    </nav>
+    </motion.nav>
   );
 };
 

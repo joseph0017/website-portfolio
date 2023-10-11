@@ -1,8 +1,33 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
+  const animateAbout = {
+    hidden: {
+      opacity: 0,
+      fill: 'rgba(255, 255, 255, 0)'
+    },
+    visible: {
+      opacity: 1,
+      fill: 'rgba(0, 0, 0, 1)',
+      transition: {
+        default: { duration: 2, ease: 'easeInOut' },
+        fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+      }
+    }
+  };
   return (
-    <section className='aboutme' id='about'>
+    <motion.section
+      className='aboutme'
+      id='about'
+      variants={animateAbout}
+      initial='hidden'
+      whileInView='visible'>
+      <div className='me'>
+        <p>
+          ABOUT ME
+        </p>
+      </div>
       <hr />
       <div className='about-container'>
         <div className='left-text'>
@@ -14,7 +39,7 @@ const About = () => {
           is no other game I think I love more, and listening to music, or just playing video games.
         </div>
       </div>
-    </section>
+    </motion.section>
 
   );
 };

@@ -1,8 +1,33 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
+  const animateToolkit = {
+    hidden: {
+      opacity: 0,
+      fill: 'rgba(255, 255, 255, 0)'
+    },
+    visible: {
+      opacity: 1,
+      fill: 'rgba(0, 0, 0, 1)',
+      transition: {
+        default: { duration: 2, ease: 'easeInOut' },
+        fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+      }
+    }
+  };
   return (
-    <section className='toolkit' id='skills'>
+    <motion.section
+      className='toolkit'
+      id='skills'
+      variants={animateToolkit}
+      initial='hidden'
+      whileInView='visible'>
+      <div className='me'>
+        <p>
+          MY TOOLKIT
+        </p>
+      </div>
       <hr />
       <div className='button-rows'>
         <div className='button-row-1'>
@@ -65,7 +90,7 @@ const Skills = () => {
         </div>
         <div className='button-row-2'></div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

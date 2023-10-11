@@ -1,23 +1,47 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const animateContact = {
+    hidden: {
+      opacity: 0,
+      fill: 'rgba(255, 255, 255, 0)'
+    },
+    visible: {
+      opacity: 1,
+      fill: 'rgba(0, 0, 0, 1)',
+      transition: {
+        default: { duration: 2, ease: 'easeInOut' },
+        fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+      }
+    }
+  };
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_okrngza', 'template_1fj9i08', form.current, '4hQJ-fZnCTIxhkZU1')
       .then((result) => {
-        console.log(result.text);
+        if (result.status === 200) {
+          alert('Thanks for reaching out, I will be in touch with you soon.');
+          form.current.reset();
+        }
+        console.log(result);
       }, (error) => {
         console.log(error.text);
       });
   };
   return (
-    <section className='contact-section' id='contact'>
+    <motion.section
+      className='contact-section'
+      id='contact'
+      variants={animateContact}
+      initial='hidden'
+      whileInView='visible'>
       <div className='connect'>
-        <h1>LET'S <span>CONNECT</span></h1>
+        <h1 className='let'>LET'S <span className='connection'>CONNECT</span></h1>
       </div>
       <div className='contact-text'>
         <p>
@@ -39,7 +63,9 @@ const Contact = () => {
           <textarea name='message' className='message' placeholder='message' />
         </div>
         <div className='submit-button'>
-          <input type='submit' value='Send' className='submit-message' />
+          <button type='submit' className='submit-message'>
+            Submit
+          </button>
         </div>
       </form>
       <div className='contact-text-2'>
@@ -47,7 +73,7 @@ const Contact = () => {
         <a href='https://www.linkedin.com/in/joseph-ogiku' className='linkedin'>LINKEDIN</a>
         <a href='https://web.facebook.com/joseph.ogiku.3' className='facebook'>FACEBOOK</a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
