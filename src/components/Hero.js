@@ -1,7 +1,6 @@
 import React from 'react';
 import next from '../assets/next.png';
 import { motion } from 'framer-motion';
-import './styles/styles.css';
 
 const Hero = () => {
   const animateHome = {

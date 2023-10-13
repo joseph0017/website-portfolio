@@ -79,7 +79,8 @@ const Project = () => {
           whileInView='visible'>
           <h2>REST COUNTRY API</h2>
           <p className='mentor'>
-            A challenge from frontend mentor
+            An application that gets all the details you need to know about any country in the world. The data comes from REST Countries API. shout out to matt from frontendmentor
+            as I enjoyed working on this application. This is a challenge from frontend mentor.
           </p>
         </motion.div>
       </div>
