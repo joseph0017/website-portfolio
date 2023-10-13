@@ -12,8 +12,8 @@ const Navbar = () => {
       opacity: 1,
       fill: 'rgba(0, 0, 0, 1)',
       transition: {
-        default: { duration: 2, ease: 'easeInOut' },
-        fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+        default: { duration: 0.7, ease: 'easeInOut' },
+        fill: { duration: 0.7, ease: [1, 0, 0.8, 1] }
       }
     }
   };

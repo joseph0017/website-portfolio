@@ -11,8 +11,8 @@ const About = () => {
       opacity: 1,
       fill: 'rgba(0, 0, 0, 1)',
       transition: {
-        default: { duration: 2, ease: 'easeInOut' },
-        fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+        default: { duration: 1.5, ease: 'easeInOut' },
+        fill: { duration: 1.5, ease: [1, 0, 0.8, 1] }
       }
     }
   };
@@ -35,8 +35,14 @@ const About = () => {
         </div>
         <div className='right-text'>
           Thanks for getting this far, I graduated from the University of Benin(UNIBEN) with a B.Sc in architecture, and graduated from software engineering, Holberton school
-          (cohort 9) with a specialization in frontend. I am however skilled in the backend as well. When I am not coding, you will often find me playing chess, as there
-          is no other game I think I love more, and listening to music, or just playing video games.
+          (cohort 9) with a specialization in frontend. I am however skilled in the backend as well.
+          <div className='right-text'>
+            I am extremely comfortable working on the backend or the frontend of the application, my expertise lies in react and django, but I can use other frontend frameworks
+            such as Next Js, and MongoDB for the backend. I enjoy writing readable and maintainable codes for my applications, while creating beautiful user interfaces.
+          </div>
+          <div className='right-text'>
+            When I am not coding, you will often find me playing chess, as there is no other game I think I love more, and listening to music.
+          </div>
         </div>
       </div>
     </motion.section>
