@@ -19,13 +19,9 @@ const Navbar = () => {
   };
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className="navbar-wrapper">
-
-    
     <nav className='navbar'>
       <section className='nav'>
-        <motion.div className='icon'
-        >
+        <div className='icon'>
           <button className='button-icon' onClick={() => {setNavbar(!navbar)}}>
             {navbar ? (
                 <motion.svg className='bullet' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#000000'
@@ -42,7 +38,7 @@ const Navbar = () => {
                />
                 )}    
           </button>
-        </motion.div>
+        </div>
         <motion.div className={`link ${navbar ? "block" : "hidden"}`}
         variants={animateNavbar}
     initial="hidden"
@@ -58,7 +54,6 @@ const Navbar = () => {
         </motion.div>
       </section>
     </nav>
-    </div>
   );
 };
 
