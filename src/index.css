@@ -22,6 +22,7 @@ code {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .icon {
@@ -31,7 +32,6 @@ code {
 .nav {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -107,15 +107,9 @@ h1 {
 }
 
 .home-section {
-    /* background: url('../../assets/3.jpg'); */
     background-color: white;
     height: 600px;
 }
-
-/* .hero-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-} */
 
 .title-container {
   background-color: #f3f5f7;
@@ -134,13 +128,6 @@ h1 {
   margin-top: 30px;
   width: 750px;
   font-size: 1.4rem;
-}
-
-
-.star1 {
-  width: 300px;
-  stroke: #000000;
-  stroke-width: 2;
 }
 
 .hero-image {
@@ -419,7 +406,6 @@ hr {
     font-size: 0.8rem;
 }
 
-
 textarea {
   font-family: Arial;
 }
@@ -459,14 +445,12 @@ textarea {
   .hero-container {
     display: flex;
   }
+
   .text {
     grid-column: 2 / 7;
     margin-left: 30px;
   }
-  .star1 {
-    width: 200px;
-    margin-left: 20px;
-  }
+
   .next-image {
     width: 40px;
   }
