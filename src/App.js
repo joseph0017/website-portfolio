@@ -1,8 +1,8 @@
-import Contact from './components/Contact';
-import About from './components/About';
-import Hero from './components/Hero';
-import Project from './components/Project';
-import Skills from './components/Skills';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Hero from './pages/Hero';
+import Project from './pages/Project';
+import Skills from './pages/Skills';
 import Navbar from './components/navbar';
 import Container from './components/Container';
 

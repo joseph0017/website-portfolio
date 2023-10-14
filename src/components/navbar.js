@@ -19,7 +19,7 @@ const Navbar = () => {
   };
   const [navbar, setNavbar] = useState(false);
   return (
-    <motion.nav className='navbar'
+    <nav className='navbar'
     >
       <section className='nav'>
         <div className='icon'>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 </ul>
         </motion.div>
       </section>
-    </motion.nav>
+    </nav>
   );
 };
 
