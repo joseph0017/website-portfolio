@@ -34,8 +34,8 @@ const About = () => {
           I USE MY BACKGROUND IN <span className='architecture'>ARCHITECTURE</span> TO BUILD <span className='creative'>CREATIVE</span> TECH SOLUTIONS.
         </div>
         <div className='right-text'>
-          Thanks for getting this far, I graduated from the University of Benin(UNIBEN) with a B.Sc in architecture, and graduated from software engineering, Holberton school
-          (cohort 9) with a specialization in frontend. I am however skilled in the backend as well.
+          Thanks for getting this far, I graduated from the University of Benin(UNIBEN) with a B.Sc in architecture, and also graduated from the ALX software engineering,
+          Holberton school (cohort 9) with a specialization in frontend. I am however skilled in the backend as well.
           <div className='right-text'>
             I am extremely comfortable working on the backend or the frontend of the application, my expertise lies in react and django, but I can use other frontend frameworks
             such as Next Js, and MongoDB for the backend. I enjoy writing readable and maintainable codes for my applications, while creating beautiful user interfaces.
